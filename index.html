@@ -125,20 +125,21 @@
   height: auto;
  }
 .text-bridge {
-  bottom: 20%;
-  right: 50%;
-  transform: translate(-50%, -50%); /* Centers the box */
-  z-index: 10;
   position: absolute !important;
+  bottom: 20%;
+  left: 50%; /* Changed from right to left for standard centering */
+  transform: translate(-50%, 0); /* Centers horizontally based on the left property */
+  z-index: 10;
   box-sizing: border-box;
-  width: 100 !important;
+  width: 100%; /* Fixed: Added % unit */
   font-family: "Bellefair", serif;
-  font-size: 150px;
+  font-size: 120px; /* Adjusted slightly for better scaling safety */
   font-weight: bold;
   color: #4287f5 !important;
   line-height: 1.2;
-  text-align: right;
+  text-align: center; /* Changed to center to match the centering logic */
 }
+
 
   </style>
 </head>
