@@ -126,7 +126,7 @@
  }
 .text-bridge {
   position: absolute !important;
-  bottom: 8%;
+  bottom: 9%;
   left: 35%;
   z-index: 10;
   box-sizing: border-box;
@@ -137,6 +137,13 @@
   color: #4287f5 !important;
   line-height: 1.2;
 }
+.text-bridge span {
+  display: block; /* Forces them onto new lines like <br> */
+}
+.line-2 {
+  padding-left: 25 px; /* Adjust this value to create the exact space you want */
+}
+
 
 
   </style>
@@ -168,7 +175,8 @@
    <img
         src="https://lh3.googleusercontent.com/d/1qbOzSELCkN-rAgIcH7y145Z_nkKpUijA"
         alt="bridge"/>
-        <div class="text-bridge">Bride<br>   Groom</div>
+      <span class="line-1">Bride</span>
+      <span class="line-2">Groom</span>
   </div>
 
 
