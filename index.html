@@ -29,49 +29,68 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
 
-  <!-- Shoelace Copy Button Component -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/copy-button/copy-button.js"></script>
-
+  
   <style>
     * {
       box-sizing: border-box;
     }
-
     html, body {
-      max-width: 100%;
+      overflow: hidden;
       overflow-x: hidden !important;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
-      background: transparent;
-      overflow: hidden; /* Mengunci scroll sebelum Open Invitation diklik */
       height: 100%;
+      max-width: 100%;
       font-family: 'Bellefair', serif;
+      background: #000000;
     }
+  <!-- ================= HOME ================= -->
 
-    /* IMAGE STYLING */
-    .drive-image {
-      width: 100%;
-  height: 100dvh;
-  object-fit: cover;  /* Menjamin gambar penuh tanpa bocor kanan, kiri, atas, maupun bawah */
-  object-position: center;
-      display: block;
-    }
-
-    /* MIDDLE COVER SECTION */
-    .middle {
-      width: 100%;
-      height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      gap: 12px;
-    }
-
+.name {
+  top: 10%;
+  left: 25%;
+  display: block;
+}
+.top-home {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: #000000;
+  overflow: hidden;
+}
+.top-home img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.name-home {
+  position: absolute;
+  z-index: 2;
+  top: 65%;
+  left: 6%;
+  width: 100%;
+  font-family: "Bellefair", serif;
+  font-size: 150px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.2;
+  text-align: left;
+}
+.bottom-home {
+  position: relative;
+  text-align: center;
+  background:#000000;
+}
+ .gn-centered {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+    }   
     #guestName {
-      font-size: 32px;
+      font-size: 70px;
       line-height: 1.2;
       font-weight: 500;
       color: #ffffff;
@@ -79,452 +98,90 @@
       word-wrap: break-word;
       padding: 0 10px;
     }
-
-    .scroll-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 34px;
-      padding: 0 18px;
-      background: #000000;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      border-radius: 4px;
-    }
-
-    .scroll-btn:active {
-      transform: scale(0.98);
-    }
-
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    .main-container {
-      width: 100%;
-      max-width: 100vw;
-      overflow-x: hidden;
-      margin: 0 auto;
-    }
-
-    img, svg, canvas {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* GIFT SECTION STYLES */
-    .gift-section {
-      position: relative;
-      width: 100%;
-    }
-
-    .container {
-      position: relative;
-      text-align: center;
-      color: white;
-    }
-
-    .bottom-right {
-      position: absolute;
-      bottom: 25%;
-      left: 55%;
-    }
-
-    .HOME {
-      width: 100%;
-  min-height: 100vh;  /* Fallback browser lama */
-  min-height: 100dvh; /* Menutup bocor bawah di Safari iOS */
-  position: relative;
-  overflow: hidden;   /* Mencegah scrollbar horizontal yang tidak diinginkan */
-}
-
-
-    .gn-centered {
-      position: absolute;
-      top: 62%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-    }
-
-    /* WISHES SECTION STYLES */
-    .wishes-section {
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 28px 18px 40px;
-      background: transparent;
-      color: #d9d5ca;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      font-weight: normal;
-      letter-spacing: 0.5px;
-      margin: 0 0 6px;
-      color: #d9d5ca;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    #wishesContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .wish-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #eee4e2;
-      border-radius: 14px;
-      padding: 18px 20px;
-      box-shadow: 0 3px 12px rgba(80, 50, 50, 0.05);
-      animation: fadeIn 0.4s ease;
-    }
-
-    .guest-title-name {
-      font-family: 'Bellefair', serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: #ffffff;
-      margin-bottom: 8px;
-    }
-
-    .guest-wish {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #d9d5ca;
-      white-space: pre-wrap;
-    }
-
-    .empty-state, .loading, .error {
-      text-align: center;
-      padding: 30px;
-      color: #d9d5ca;
-      font-family: 'Bellefair', serif;
-      font-size: 16px;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(5px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .wishes-section {
-        padding: 24px 14px 35px;
-      }
-      .section-title {
-        font-size: 25px;
-      }
-      .wish-card {
-        padding: 16px 17px;
-      }
-    }
-
-    /* VIDEO BACKGROUND STYLES */
-    .video-background {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      pointer-events: none;
-      overflow: hidden;
-      background: #ffffff;
-    }
-
- .video-background iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* Menjaga rasio 16:9 berdasarkan lebar layar */
-  min-height: 100vh;
-  min-width: 177.77vh; /* Menjaga rasio 16:9 berdasarkan tinggi layar */
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-
-    /* Style the image to look clickable */
-    .gift-image {
-      width: 100%;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      position: relative;
-      z-index: 5;
-    }
-    
-    .gift-image:hover {
-      transform: scale(1.02);
-    }
-
-    /* Base styles for the hidden container */
-    #hidden-gift {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      margin-top: 15px auto 0;
-      font-family: 'Bellefair', serif;
-      font-size: 20px;
-      font-weight: bold;
-      color: #ffffff;
-      transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
-      position: relative;
-      z-index: 10;
-      text-align: center;
-    }
-
-    #hidden-gift.show {
-      opacity: 1;
-      max-height: 200px;
-      padding: 20px 0;
-      overflow: visible;
-    }
-
-/* COUNTDOWN CUSTOM STYLES */
-.countdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 20px 10px;
-  margin: 0 auto;
-}
-
-.countdown-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 55px;
-}
-
-.countdown-box span {
+ .date-home {
   font-family: 'Bellefair', serif;
-  font-size: 32px;
+  font-size: 50px; 
   font-weight: bold;
   color: #ffffff;
-  line-height: 1;
+  line-height: 1.2;
+  position: absolute;
+  bottom: 200px;
+  left: 70px;
+  display: block;
+  text-align: left;
+}
+ <!-- ================= BRIDGE ================= -->
+ .text {
+  bottom: 10%;
+  right: 25%;
+  display: block;
+}
+ .section {
+  position: relative;
+  display: inline-block;
+ }
+ .section img {
+  display: block;
+  width: 100%;
+  height: auto;
+ }
+.text-bridge {
+  bottom: 20%;
+  right: 50%;
+  transform: translate(-50%, -50%); /* Centers the box */
+  z-index: 1;
+  position: absolute !important;
+  box-sizing: border-box;
+  width: 100 !important;
+  font-family: "Bellefair", serif;
+  font-size: 150px;
+  font-weight: bold;
+  color: #4287f5 !important;
+  line-height: 1.2;
+  text-align: right;
 }
 
-.countdown-box p {
-  font-family: 'Bellefair', serif;
-  font-size: 12px;
-  color: #d9d5ca;
-  margin: 4px 0 0 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.countdown-separator {
-  font-family: 'Bellefair', serif;
-  font-size: 28px;
-  color: #ffffff;
-  line-height: 1;
-  margin-top: -14px;
-}
-
-    
   </style>
 </head>
-
 <body>
-
-  <!-- BACKGROUND VIDEO -->
-  <div class="video-background">
-    <iframe
-      src="https://www.youtube.com/embed/QOJaaB8CMQg?autoplay=1&mute=1&muted=1&controls=0&loop=1&playlist=QOJaaB8CMQg&playsinline=1&enablejsapi=1&disablekb=1&fs=0&modestbranding=1&rel=0"
-      allow="autoplay; encrypted-media"
-      playsinline
-      frameborder="0">
-    </iframe>
-  </div>
-
-  <!-- BACKGROUND AUDIO -->
-  <audio id="bg-audio" loop preload="auto">
-    <source src="https://raw.githubusercontent.com/enve-digital/wedding/main/rock%20show.mp3" type="audio/mpeg">
-  </audio>
-
-  <!-- ================= HOME SECTION ================= -->
-  <div class="HOME">
-    <a href="javascript:void(0);" onclick="bukaUndangan();" style="display: block; width: 100%;">
+  <!-- ================= HOME ================= -->
+    <div class="top-home">
       <img 
-        class="drive-image" 
-        src="https://lh3.googleusercontent.com/d/1BjNexL8odVphTZe8lnwrqOeknzK8VfrG"
-        style="width: 100%; height: 100dvh;
-  object-fit: cover;  /* Menjamin gambar penuh tanpa bocor kanan, kiri, atas, maupun bawah */
-  object-position: center; cursor: pointer;" 
-        alt="Invitation Home"
-      >
-    </a>
-    <div class="gn-centered" id="guestName">Guest</div>
-  </div>
-
-  <!-- ================= BRIDGE ================= -->
-  <div id="bridge">
-      <img
-        src="https://lh3.googleusercontent.com/d/1vcHOMXpSV6jEJ7XSKSaPYwExZNTb6OQt"
-        alt="bridge"
+        src="https://lh3.googleusercontent.com/d/1g95LQIudf5YZRMUYh7SoIlBVnv7k-W4K"
+        alt="top home"
         style="max-height:100%; width:100%; cursor:pointer;"
       >
+      <div class="name-home">Bride Name<br>Groom Name</div>
   </div>
 
-  <!-- ================= OPENER ================= -->
-  <div id="opener">
+    <div class="bottom-home">
+      <a href="javascript:void(0);" onclick="OpenInvitation();" style="display: block; width: 100%;">
       <img
-        src="https://lh3.googleusercontent.com/d/13D2onLSHhkB6dPnqpPQQyjX1HDVlrAq4"
-        alt="opener"
+        src="https://lh3.googleusercontent.com/d/133VDrlZF22-07KDGoJbPQumH3FZgBJsz"
+        alt="bottom home"
         style="max-height:100%; width:100%; cursor:pointer;"
       >
+    <a class="gn-centered" id="guestName">Guest</a>
+    </a>  
+    <a class="date-home">Date</a>
+  </div>
+  
+  <div id="bridge" class="section">
+   <img
+        src="https://lh3.googleusercontent.com/d/1qbOzSELCkN-rAgIcH7y145Z_nkKpUijA"
+        alt="bridge"/>
+        <div class="text-bridge">Bride<br>Groom</div>
   </div>
 
-  <!-- ================= INTRODUCTION ================= -->
-  <div id="introduction">
-      <img
-        src="https://lh3.googleusercontent.com/d/1oQB5xIP92c_IhIXnTDmrTb85VziNa4GP"
-        alt="introduction"
-        style="max-height:100%; width:100%; cursor:pointer;"
-      >
-  </div>
 
-  <!-- ================= AYAT ================= -->
-  <div id="ayat">
-      <img
-        src="https://lh3.googleusercontent.com/d/1P62RZMHTchboHSRAzxnpDUj86Sg-sNUs"
-        alt="ayat"
-        style="max-height:100%; width:100%; cursor:pointer;"
-      >
-  </div>
 
-  <!-- ================= GALLERY ================= -->
-  <div id="gallery">
-      <img
-        src="https://lh3.googleusercontent.com/d/126iiHeq07OHysoW-3YGI1aZfMbj2VRRD"
-        alt="gallery"
-        style="max-height:100%; width:100%; cursor:pointer;"
-      >
-  </div>
 
-  <!-- CALENDAR & LOCATION SECTION -->
-  <div style="display: flex; flex-direction: column; width: 100%; margin: 0; padding: 0; line-height: 0;">
-    
-    <!-- CALENDAR REMINDER BUTTON -->
-    <a 
-      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%20of%20Talita%20%26%20Dafpa&dates=20261025T000000Z/20261025T000000Z&details=Save%20the%20Date&location=Roemah%20Polonia" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      style="display: block; width: 100%; margin: 0; padding: 0;">
-      <img
-        src="https://lh3.googleusercontent.com/d/1wKNDe3bBC-Wl_92JLduCHO8OTxqzEN4k"
-        alt="calendar"
-        style="width: 100%; display: block; margin: 0; border: none;"
-      >
-    </a>
-
-    <!-- LOCATION BUTTON -->
-    <a 
-      href="https://maps.app.goo.gl/GNGbdLYaekJAPeWD6" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      style="display: block; width: 100%; margin: 0; padding: 0;">
-      <img
-        src="https://lh3.googleusercontent.com/d/1lWi2hCmoYn8rng_8HlhZAnm6FJXZ_luK"
-        alt="location"
-        style="width: 100%; display: block; margin: 0; border: none;"
-      >
-    </a>
-
-  </div>
-
-<!-- COUNTDOWN SECTION -->
-<div class="countdown-container">
-  <div class="countdown-box">
-    <span id="cd-days">00</span>
-    <p>Days</p>
-  </div>
-  <div class="countdown-separator">:</div>
-  <div class="countdown-box">
-    <span id="cd-hours">00</span>
-    <p>Hours</p>
-  </div>
-  <div class="countdown-separator">:</div>
-  <div class="countdown-box">
-    <span id="cd-mins">00</span>
-    <p>Mins</p>
-  </div>
-  <div class="countdown-separator">:</div>
-  <div class="countdown-box">
-    <span id="cd-secs">00</span>
-    <p>Secs</p>
-  </div>
-</div>
-
-  <!-- TALLY BUTTON -->
-  <div id="rsvp-section">
-    <a href="javascript:void(0);" onclick="bukaTallyPopup()" style="display: block; text-align: right;">
-      <img
-        src="https://lh3.googleusercontent.com/d/1fq1jaiphLe8JKhoFYP1fuyH5gtEmLO50"
-        alt="Tally Button"
-        style="width: 100%; display: block; margin: 0; border: none;"
-      >
-    </a>
-  </div>
-
-  <!-- GIFT SECTION -->
-  <section class="gift-section">
-    <div class="container">
-      <img 
-        class="gift-image"
-        style="width:100%" 
-        src="https://lh3.googleusercontent.com/d/1RpDeYZR3GssA2qYpK-DcDwli66ERUe3C" 
-        alt="Gift Box"
-        id="giftBtn"
-      />
-      <div id="hidden-gift">
-        BNI 260482893 a/n Lolita Putri 
-        <sl-copy-button
-          value="260482893"
-          copy-label="Click to copy"
-          success-label="Copied"
-          error-label="Whoops, your browser doesn't support this!"
-        ></sl-copy-button>
-      </div>
-    </div>
-  </section>
-
-  <!-- WISHES SECTION -->
-  <section class="wishes-section">
-    <div id="wishesContainer">
-      <div class="loading">Loading wishes...</div>
-    </div>
-  </section>
-
-  <!-- CLOSING IMAGE -->
-  <img 
-    class="drive-image"
-    style="width:100%" 
-    src="https://lh3.googleusercontent.com/d/1_9aKOv02mox3DvYfBJcT6s9t2ROHmF-1" 
-    alt="closing"
-  />
-
+  
   <!-- TALLY EMBED SCRIPT -->
   <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <!-- Shoelace Copy Button Component -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/copy-button/copy-button.js"></script>
 
   <!-- ================= FUNCTIONALITY SCRIPT ================= -->
   <script>
@@ -544,8 +201,8 @@
       }
     }, { once: true });
 
-    // 2. OPEN INVITATION BUTTON
-    function bukaUndangan() {
+    //OKKK 2. OPEN INVITATION BUTTON
+    function OpenInvitation() {
       document.documentElement.style.overflow = 'auto';
       document.body.style.overflow = 'auto';
 
