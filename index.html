@@ -13,21 +13,18 @@
   <meta property="og:image:height" content="600" />
   <meta property="og:description" content="We’d be glad if you could celebrate our special day. Click to open the invitation. 🤍" />
   <meta property="og:site_name" content="lolitaputrir" />
-
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1coll3LTJbqcG-ecuy1cXngCX55kpdavq">
 
-
   <title>The Wedding of Talita & Dafpa</title>
   <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1fOHyy0OcFg19rFN37QOQNWVO3YyWnCWQ">
 
-
-  
   <!-- Google Fonts Embed Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Noto Serif' rel='stylesheet'>
 
   
   <style>
@@ -143,57 +140,68 @@
   left: 47%;
   z-index: 10;
   box-sizing: border-box;
-  width: 100%; /* Fixed: Added % unit */
+  width: 100%; 
   font-family: "Bellefair", serif;
   font-size: 50px; 
   font-weight: bold;
   color: #ffffff !important;
   line-height: 1.2;
 }
-
+.paragraph-opener {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  z-index: 10;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%; 
+  font-family: "Noto Serif", serif;
+  font-size: 15px; 
+  font-weight: 400;
+  color: #ffffff !important;
+  line-height: 1;
+}
 
   </style>
 </head>
 <body>
-  <!-- ================= HOME ================= -->
-    <div class="top-home">
+<!-- ================= HOME ================= -->
+  <div class="top-home">
       <img 
         src="https://lh3.googleusercontent.com/d/1D9Y1rFc997wjBGqj7Z-KKPO-UVv71jVm"
         alt="top home"
-        style="max-height:100%; width:100%; cursor:pointer;"
-      >
-      <div class="name-home">Bride Name<br>Groom Name</div>
-  </div>
-
-    <div class="bottom-home">
+        style="max-height:100%; width:100%; cursor:pointer;">
+        <div class="name-home">Bride Name<br>Groom Name</div>
+        </div>
+  <div class="bottom-home">
       <a href="javascript:void(0);" onclick="OpenInvitation();" style="display: block; width: 100%;">
-      <img
+        <img
         src="https://lh3.googleusercontent.com/d/1d9zhjKctxY1glsZoFDfM0UMj0erzqFPA"
         alt="bottom home"
-        style="max-height:100%; width:100%; cursor:pointer;"
-      >
-    <a class="gn-centered" id="guestName">Guest</a>
-    </a>  
-    <a class="date-home">Date</a>
-  </div>
-  
+        style="max-height:100%; width:100%; cursor:pointer;">
+        <a class="gn-centered" id="guestName">Guest</a>
+      </a>  
+      <a class="date-home">Date</a>
+      </div>
+<!-- ================= BRIDGE ================= -->
   <div id="bridge" class="section">
-   <img
+     <img
         src="https://lh3.googleusercontent.com/d/1qbOzSELCkN-rAgIcH7y145Z_nkKpUijA"
         alt="bridge"/>
-      <div class="text1-bridge">Bride</div>
-      <div class="text2-bridge">Groom</div>
+        <div class="text1-bridge">Bride</div>
+        <div class="text2-bridge">Groom</div>
   </div>
-
-
-
+<!-- ================= OPENER ================= -->
+  <div id="opener" class="section">
+      <img 
+        src="https://lh3.googleusercontent.com/d/1PdXdxX_te2sIral31ySEPdNJJt1-TAPR"
+        alt="top home"
+        style="max-height:100%; width:100%; cursor:pointer;">
+        <div class="paragraph-opener">Together with our family, we joyfully invite you to celebrate our wedding day.</div>
+        </div>
 
   
-  <!-- TALLY EMBED SCRIPT -->
-  <script async src="https://tally.so/widgets/embed.js"></script>
 
-  <!-- Shoelace Copy Button Component -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/copy-button/copy-button.js"></script>
 
   <!-- ================= FUNCTIONALITY SCRIPT ================= -->
   <script>
@@ -213,11 +221,10 @@
       }
     }, { once: true });
 
-    //OKKK 2. OPEN INVITATION BUTTON
+    //2. OPEN INVITATION BUTTON
     function OpenInvitation() {
       document.documentElement.style.overflow = 'auto';
       document.body.style.overflow = 'auto';
-
       setTimeout(function() {
         const bridgeSection = document.getElementById('bridge');
         if (bridgeSection) {
@@ -242,14 +249,12 @@
         });
       }
     }
-
     function kembalikanKeRSVP() {
       const rsvpEl = document.getElementById('rsvp-section');
       if (rsvpEl) {
         rsvpEl.scrollIntoView({ behavior: 'instant' });
       }
     }
-
     window.addEventListener('message', function(e) {
       if (e.data && typeof e.data === 'string' && e.data.includes('Tally.PopupClosed')) {
         kembalikanKeRSVP();
@@ -368,5 +373,9 @@ setInterval(updateCountdown, 1000);
 
     
   </script>
+    <!-- TALLY EMBED SCRIPT -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <!-- Shoelace Copy Button Component -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/copy-button/copy-button.js"></script>
 </body>
 </html>
