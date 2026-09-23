@@ -280,68 +280,58 @@
                   vertical-align: middle;
                   width: 100%;
                 }
+                .column img:hover {
+                  opacity: 0.8;
+                }
                 .modal {
                   display: none;
                   position: fixed;
-                  z-index: 1;
-                  padding-top: 100px;
+                  z-index: 1000;
                   left: 0;
                   top: 0;
                   width: 100%;
                   height: 100%;
-                  overflow: auto;
-                  background-color: black;
-                }
-                .modal-content {
-                  position: relative;
-                  background-color: #fefefe;
-                  margin: auto;
-                  padding: 0;
-                  width: 90%;
-                  max-width: 1200px;
+                  overflow-y: auto;
+                  background-color: rgba(0, 0, 0, 0.95);
+                  padding: 60px 0;
                 }
                 .close {
                   color: white;
-                  position: absolute;
-                  top: 10px;
-                  right: 25px;
-                  font-size: 35px;
+                  position: fixed;
+                  top: 20px;
+                  right: 30px;
+                  font-size: 40px;
                   font-weight: bold;
-                  z-index:10;
-                }
-                .close:hover,
-                .close:focus {
-                  color: #999;
-                  text-decoration: none;
-                  cursor: pointer;  
-                }
-                .mySlides {
-                  display: none;
-                }
-                .cursor {
+                  z-index: 1001;
                   cursor: pointer;
+                  background: rgba(0, 0, 0, 0.5);
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  line-height: 1;
                 }
-                img {
-                  margin-bottom: -4px;
+                .close:hover {
+                  color: #bbb;
                 }
-                .caption-container {
-                  text-align: center;
-                  background-color: black;
-                  padding: 2px 16px;
-                  color: white;
+                .modal-content {
+                  margin: auto;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 20px;
+                  width: 90%;
+                  max-width: 1000px;
                 }
-                .demo {
-                  opacity: 0.6;
-                }
-                .active,
-                .demo:hover {
-                  opacity: 1;
-                }
-                img.hover-shadow {
-                  transition: 0.3s;
-                }
-                .hover-shadow:hover {
-                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                .modal-content img {
+                  width: 100%;
+                  max-width: 100%;
+                  height: auto;
+                  max-height: 90vh;
+                  object-fit: contain;
+                  border-radius: 6px;
                 }
   </style>
 </head>
@@ -410,42 +400,40 @@
                   <!-- Photo Grid -->
                   <div class="row"> 
                     <div class="column">
-                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal();currentSlide(1)" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
-                      <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal();currentSlide(2)" src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg">
+                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
+                      <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg">
                     </div>
                     <div class="column">
-                      <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal();currentSlide(3)" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
-                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal();currentSlide(4)" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
-                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal();currentSlide(5)" src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
+                      <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
+                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
                     </div>  
-                    <!-- Photo Grid -->
                     <div class="column">
-                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal();currentSlide(6)" src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
-                      <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal();currentSlide(7)" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
+                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+                      <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
                     </div>
                     <div class="column">
-                      <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal();currentSlide(8)" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
-                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal();currentSlide(9)" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
-                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal();currentSlide(10)" src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
+                      <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+                      <img style="aspect-ratio: 8/5; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
                     </div>  
                   </div>
                   
-                  <!-- Modal Pop-up -->
+                  <!-- Modal Pop-up (Menampung semua foto sekaligus) -->
                   <div id="myModal" class="modal">
                     <span class="close" onclick="closeModal()">&times;</span>
                     <div class="modal-content">
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg"></div>
-                      <div class="mySlides"><img src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg"></div>
+                      <img src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+                      <img src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
+                      <img src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
+                      <img src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+                      <img src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
+                      <img src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+                      <img src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+                      <img src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
                     </div>
                   </div>
+
 
   <!-- ================= FUNCTIONALITY SCRIPT ================= -->
   <script async src="https://tally.so/widgets/embed.js"></script>
@@ -598,59 +586,49 @@
 
 
     // 7. COUNTDOWN TIMER SCRIPT
-    const targetDate = new Date("October 25, 2026 00:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        const cdDays = document.getElementById("cd-days");
-        const cdHours = document.getElementById("cd-hours");
-        const cdMins = document.getElementById("cd-mins");
-        const cdSecs = document.getElementById("cd-secs");
-
-        if (cdDays) cdDays.innerText = String(days).padStart(2, '0');
-        if (cdHours) cdHours.innerText = String(hours).padStart(2, '0');
-        if (cdMins) cdMins.innerText = String(minutes).padStart(2, '0');
-        if (cdSecs) cdSecs.innerText = String(seconds).padStart(2, '0');
-      }
-    }
-
-     // 8. FULLSCREEN GALLERY 
-         function openModal() {
-        document.getElementById("myModal").style.display = "block";
+          const targetDate = new Date("October 25, 2026 00:00:00").getTime();
+      
+          function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+      
+            if (difference > 0) {
+              const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      
+              const cdDays = document.getElementById("cd-days");
+              const cdHours = document.getElementById("cd-hours");
+              const cdMins = document.getElementById("cd-mins");
+              const cdSecs = document.getElementById("cd-secs");
+      
+              if (cdDays) cdDays.innerText = String(days).padStart(2, '0');
+              if (cdHours) cdHours.innerText = String(hours).padStart(2, '0');
+              if (cdMins) cdMins.innerText = String(minutes).padStart(2, '0');
+              if (cdSecs) cdSecs.innerText = String(seconds).padStart(2, '0');
             }
-            
-            function closeModal() {
-              document.getElementById("myModal").style.display = "none";
+          }
+      
+ // 8. FULLSCREEN GALLERY 
+       function openModal() {
+            document.getElementById("myModal").style.display = "block";
+            document.body.style.overflow = "hidden"; // Mencegah halaman utama ikut bergeser saat modal di-scroll
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+            document.body.style.overflow = "auto"; // Mengembalikan scroll halaman utama
+          }
+          
+          // Tutup modal jika user menekan tombol 'ESC' di keyboard
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+              closeModal();
             }
-            
-            var slideIndex = 1;
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              if (n > slides.length) { slideIndex = 1; }
-              if (n < 1) { slideIndex = slides.length; }
-              
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-              
-              if (slides[slideIndex-1]) {
-                  slides[slideIndex-1].style.display = "block";
-              }
-            }
+          });
+
+    
 </script>
 </body>
 </html>
