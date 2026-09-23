@@ -235,10 +235,34 @@
       bottom: 0px;
       padding:20px;
     }
-     .title-section {
+    .title-section {
       position: relative;
       display: block;
       width: 100%;
+      height:25dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+     }
+     .title1 {
+      font-size: 45px;
+      font-family: 'Cinzel', serif;
+      color: #ffffff;
+      line-height: 1;
+      /* Geser sedikit ke kiri jika ingin gaya offset seperti gambar Canva */
+      margin-right: 180px; 
+      z-index: 1;
+     }
+     .title2 {
+      font-size: 90px; /* Diperbesar agar terkesan menonjol */
+      font-family:'Luxurious Script', serif;
+      color: #ffffff;
+      line-height: 0.8;
+      /* Margin negatif ini yang bikin teks naik dan "overlap" */
+      margin-top: -35px; 
+      z-index: 2;
+     }
   </style>
 </head>
 <body>
@@ -298,9 +322,9 @@
 
   <!-- ================= GALLERY ================= -->   
   <div id="gallery" class="section" style="height:100dvh; display: flex; flex-direction: column;">
-    <div class="title-section" style="height:25dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <span style="font-size:20px;font-family:'Noto Serif',serif;line-height:0.5;color: #ffffff;text-align:right;z-index:1"> Our </span>
-    <span style="font-size:50px;font-family:'Luxurious Script', serif;color: #ffffff;text-align:center;z-index:1"> Gallery </span>
+    <div class="title-section">
+    <span class="title1"> Our </span>
+    <span class="title2"> Gallery </span>
     </div>
    </div>
 
