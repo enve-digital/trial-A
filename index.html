@@ -262,35 +262,24 @@
       margin-top: -13px; 
       z-index: 2;
     }
-    .masonry-auto-wrapper {
+    .row {
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      max-width: 100%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
       width: 100%;
-      margin: 0 auto;
-      box-sizing: border-box;
     }
-    .masonry-auto-col {
-      flex: 1 1 0;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-    }
-    .photo-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 2px;
-      transition: transform 0.3s ease;
-    }
-    .photo-item img:hover {
-      transform: scale(1.02);
-    }
-  
   </style>
 </head>
 <body>
@@ -354,29 +343,49 @@
         <span class="title1"> Our </span>
         <span class="title2"> Gallery </span>
       </div>
-       <div id="masonryContainer" class="masonry-auto-wrapper">
-        <div class="photo-item"><img src="https://images.squarespace-cdn.com/content/v1/69d2db8f2aa5fd0fa47a0342/1775490341370-L5KJ1QU77HI2GACP2HP3/franklin-TN-brides-wedding-photography35.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-        <div class="photo-item"><img src="https://images.squarespace-cdn.com/content/v1/69d2db8f2aa5fd0fa47a0342/1775490341370-L5KJ1QU77HI2GACP2HP3/franklin-TN-brides-wedding-photography35.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-        <div class="photo-item"><img src="https://images.squarespace-cdn.com/content/v1/69d2db8f2aa5fd0fa47a0342/1775490341370-L5KJ1QU77HI2GACP2HP3/franklin-TN-brides-wedding-photography35.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-        <div class="photo-item"><img src="https://images.squarespace-cdn.com/content/v1/69d2db8f2aa5fd0fa47a0342/1775490341370-L5KJ1QU77HI2GACP2HP3/franklin-TN-brides-wedding-photography35.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-        <div class="photo-item"><img src="https://images.squarespace-cdn.com/content/v1/69d2db8f2aa5fd0fa47a0342/1775490341370-L5KJ1QU77HI2GACP2HP3/franklin-TN-brides-wedding-photography35.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-        <div class="photo-item"><img src="https://images.squarespace-cdn.com/content/v1/69d2db8f2aa5fd0fa47a0342/1775490341370-L5KJ1QU77HI2GACP2HP3/franklin-TN-brides-wedding-photography35.jpg"></div>
-        <div class="photo-item"><img src="https://jogja.disway.id/upload/fb9b07e373777b9ba00934251c7f0be9.jpg"></div>
-      </div>
-  </div>
-
-
-
-
-
-
-
+       <!-- ================= Photo Grid ================= --> 
+            <div class="row"> 
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
+                <img style="width:100%;aspect-ratio: 9/16;object-fit: cover;" src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg" >
+              </div>
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 1/1;object-fit: cover;" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+                <img style="width:100%;aspect-ratio: 4/3;object-fit: cover;" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;"  src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg" >
+              </div>  
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;" src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+                <img style="width:100%;aspect-ratio: 9/16;object-fit: cover;" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg" >
+              </div>
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 1/1;object-fit: cover;" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+                <img style="width:100%;aspect-ratio: 4/3;object-fit: cover;" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;"  src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg" >
+              </div>  
+              </div>
+         <!-- ================= Photo Grid ================= --> 
+            <div class="row"> 
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
+                <img style="width:100%;aspect-ratio: 9/16;object-fit: cover;" src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg" >
+              </div>
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 1/1;object-fit: cover;" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+                <img style="width:100%;aspect-ratio: 4/3;object-fit: cover;" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;"  src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg" >
+              </div>  
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;" src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+                <img style="width:100%;aspect-ratio: 9/16;object-fit: cover;" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg" >
+              </div>
+              <div class="column">
+                <img style="width:100%;aspect-ratio: 1/1;object-fit: cover;" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+                <img style="width:100%;aspect-ratio: 4/3;object-fit: cover;" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+                <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;"  src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg" >
+              </div>  
+            </div>
+</div>
 
 
 
@@ -557,48 +566,6 @@
     }
 
    
-   // 8. MASONRY-AUTO-WRAPPER
-  function setupMasonry() {
-    const container = document.getElementById('masonryContainer');
-    if (!container) return;
-          // Ambil elemen gambar, baik yang langsung 'img' maupun didalam '.gallery-item'
-          let items = Array.from(container.querySelectorAll('.gallery-item'));
-          if (items.length === 0) {
-            items = Array.from(container.children);
-          }
-          if (items.length === 0) return;
-          // Tentukan jumlah kolom berdasarkan lebar layar
-          const numCols = window.innerWidth <= 600 ? 2 : 4;
-          // Simpan elemen asli di memory
-          const fragment = document.createDocumentFragment();
-          // Buat wadah kolom
-          const cols = [];
-          for (let i = 0; i < numCols; i++) {
-            const colDiv = document.createElement('div');
-            colDiv.className = 'masonry-auto-col';
-            cols.push(colDiv);
-          }
-          // Distribusikan item ke kolom-kolom (bergantian 0, 1, 2, 3)
-          items.forEach((item, index) => {
-            cols[index % numCols].appendChild(item);
-          });
-      
-          // Kosongkan container lalu isi dengan kolom baru
-          container.innerHTML = '';
-          cols.forEach(col => container.appendChild(col));
-        }
-      
-        // Jalankan saat DOM siap & saat gambar selesai ter-load
-        document.addEventListener('DOMContentLoaded', setupMasonry);
-        window.addEventListener('load', setupMasonry);
-      
-        // Jalankan ulang jika orientasi HP berubah
-        window.addEventListener('resize', () => {
-          clearTimeout(window.resizeTimer);
-          window.resizeTimer = setTimeout(setupMasonry, 150);
-        });
-
-
     
 </script>
 </body>
