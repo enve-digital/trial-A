@@ -262,24 +262,87 @@
       margin-top: -13px; 
       z-index: 2;
     }
-    .row {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-    .column {
-      -ms-flex: 25%; /* IE10 */
-      flex: 25%;
-      max-width: 25%;
-      padding: 0 4px;
-    }
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
-      width: 100%;
-    }
+                 .row {
+                  display: -ms-flexbox;
+                  display: flex;
+                  -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+                  padding: 0 4px;
+                }
+                .column {
+                  -ms-flex: 25%; /* IE10 */
+                  flex: 25%;
+                  max-width: 25%;
+                  padding: 0 4px;
+                }
+                .column img {
+                  margin-top: 8px;
+                  vertical-align: middle;
+                  width: 100%;
+                }
+                .modal {
+                  display: none;
+                  position: fixed;
+                  z-index: 1;
+                  padding-top: 100px;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  overflow: auto;
+                  background-color: black;
+                }
+                .modal-content {
+                  position: relative;
+                  background-color: #fefefe;
+                  margin: auto;
+                  padding: 0;
+                  width: 90%;
+                  max-width: 1200px;
+                }
+                .close {
+                  color: white;
+                  position: absolute;
+                  top: 10px;
+                  right: 25px;
+                  font-size: 35px;
+                  font-weight: bold;
+                  z-index:10;
+                }
+                .close:hover,
+                .close:focus {
+                  color: #999;
+                  text-decoration: none;
+                  cursor: pointer;  
+                }
+                .mySlides {
+                  display: none;
+                }
+                .cursor {
+                  cursor: pointer;
+                }
+                img {
+                  margin-bottom: -4px;
+                }
+                .caption-container {
+                  text-align: center;
+                  background-color: black;
+                  padding: 2px 16px;
+                  color: white;
+                }
+                .demo {
+                  opacity: 0.6;
+                }
+                .active,
+                .demo:hover {
+                  opacity: 1;
+                }
+                img.hover-shadow {
+                  transition: 0.3s;
+                }
+                .hover-shadow:hover {
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
   </style>
 </head>
 <body>
@@ -385,6 +448,21 @@
                 <img style="width:100%;aspect-ratio: 8/5;object-fit: cover;"  src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg" >
               </div>  
             </div>
+
+    <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides">
+                <img style="width:100%" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+                <img style="width:100%" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
+                <img style="width:100%"  src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg" >
+                <img style="width:100%" src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+                <img style="width:100%" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg" >
+                <img style="width:100%" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+                <img style="width:100%" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+                <img style="width:100%"  src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg" >
+                </div>
+      </div>  </div>
 </div>
 
 
@@ -565,6 +643,43 @@
       }
     }
 
+       // 8. FULLSCREEN GALLERY 
+    function openModal() {
+            document.getElementById("myModal").style.display = "block";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+          }
    
     
 </script>
