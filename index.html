@@ -334,6 +334,17 @@
                   object-fit: contain;
                   border-radius: 6px;
                 }
+       .event-column {
+        -ms-flex: 30%; /* IE10 */
+        flex: 30%;
+        max-width: 30%;
+        padding: 0 4px;
+        z-index:2;
+        position:absolute;
+        }
+      .column-13 {
+       flex: 1;
+    
   </style>
 </head>
 <body>
@@ -451,7 +462,19 @@
       <div class="title-section" style="position:absolute;z-index:1;top:40px;left:5%;">
         <span class="title1"> Our </span>
         <span class="title2" style="margin-top: -16px; "> Day </span>
+   <div class="event-column">
+  <div class="column-13">
+    <p>Text for the first column goes here.</p>
+  </div>
+   <div class="column-13">
+    <p>Text for the first column goes here.</p>
+  </div>
+    <div class="column-13">
+    <p>Text for the first column goes here.</p>
+  </div>
+</div>
       </div>
+
 
 
 
