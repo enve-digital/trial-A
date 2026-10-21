@@ -389,14 +389,30 @@
             margin-top: 2px;
             color: #ffffff;
           }     
+          .time-column {
+            flex: 1; 
+            display: flex;
+            position: relative;
+            z-index: 5;
+            background-color: transparent;
+            padding: 0 12px;
+            box-sizing: border-box;
+          }
+          .time-column.col-left {
+            justify-content: flex-end;
+            text-align: right;
+          }
+          .time-column.col-right {
+            justify-content: flex-start;
+            text-align: left;
+          }
           .time-text {
-            font-size: 35px;
-            font-family:'Luxurious Script',serif;
-            line-height: 3;
+            font-size: 40px;
+            font-family: 'Luxurious Script', serif;
+            line-height: 1;
             font-weight: 700;
             color: #ffffff;
-            align-items: flex-end;
-            justify-content: flex-end;
+            margin: 0;
           }
           .time-time {
             font-size: 22px;
@@ -404,8 +420,7 @@
             line-height: 1;
             font-weight: 700;
             color: #ffffff;
-            align-items: flex-end;
-            justify-content: flex-end;
+            margin: 0;
           }
   </style>
 </head>
@@ -537,11 +552,13 @@
         <div class="event-column-border">
           <span>October</span> </div>
       </div> 
-    <div class="event-row" style="top: 300px;"> 
-      <div class="event-column" style="line-height: 3;">
-          <p class="time-text" style="text-align:right;">Akad</p> </div>
-      <div class="event-column">
-          <span class="time-time" style="text-align:left;">09 AM - 11 AM</span> </div>
+   
+      <div class="event-row" style="top: 300px;"> 
+        <div class="time-column col-left">
+          <p class="time-text">Akad</p> </div>
+        <div class="time-column col-right">
+          <span class="time-time">09 AM - 11 AM</span> </div>
+      </div>
 
  </div>
     
