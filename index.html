@@ -30,12 +30,12 @@
       box-sizing: border-box;
     }
     @font-face {
-    font-family: 'New-Icon-Script';
-    src: url('https://raw.githubusercontent.com/enve-digital/trial-A/main/New-Icon-Script-Exfont1157.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+      font-family: 'New-Icon-Script';
+      src: url('https://raw.githubusercontent.com/enve-digital/trial-A/main/New-Icon-Script-Exfont1157.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
     html, body {
       overflow: hidden;
       overflow-x: hidden !important;
@@ -46,11 +46,6 @@
       max-width: 100%;
       font-family: 'Bellefair', serif;
       background: #000000;
-    }
-    .name {
-      top: 12%;
-      left: 25%;
-      display: block;
     }
     .top-home {
       position: relative;
@@ -113,16 +108,11 @@
       display: block;
       text-align: left;
     }
-    .text {
-      bottom: 10%;
-      right: 25%;
-      display: block;
-    }
     .section {
       position: relative;
       display: block;
       width: 100%;
-      margin-top:100px;
+      margin-top: 100px;
     }
     .section img {
       display: block;
@@ -156,17 +146,9 @@
       line-height: 1.2;
     }
     .paragraph1 {
-      top: 50%;
-      left: 0;
-      z-index: 10;
       text-align: center;
       box-sizing: border-box;
       width: 100%; 
-      min-height: 50vh; 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-block: auto;
       padding: 50px;
       font-family: "Noto Serif", serif;
       font-size: 15px; 
@@ -176,9 +158,6 @@
     }
     .paragraph2 {
       margin-bottom: 10px;
-      top: 50%;
-      left: 0;
-      z-index: 10;
       text-align: center;
       box-sizing: border-box;
       width: 100%; 
@@ -191,8 +170,8 @@
     }
     .couple {
       position: relative;
-      width:100%;
-      height:50dvh;
+      width: 100%;
+      min-height: 50dvh;
       display: flex;
       flex-direction: column;
     }
@@ -217,7 +196,7 @@
       color: #ffffff;
       line-height: 1.2;
       bottom: 30%;
-      padding:20px;
+      padding: 20px;
     } 
     .parents-name {
       position: absolute;
@@ -229,7 +208,7 @@
       color: #ffffff;
       line-height: 1.2;
       top: 60%;
-      padding:20px;
+      padding: 20px;
     }
     .couple-name {
       position: absolute;
@@ -241,19 +220,19 @@
       color: #ffffff;
       line-height: 1.2;
       bottom: 0px;
-      padding:20px;
+      padding: 20px;
     }
     .title-section {
       position: relative;
       display: block;
       width: 100%;
-      height:25dvh;
+      height: 25dvh;
       display: flex;
       flex-direction: column;
       align-items: center; 
       justify-content: center;
-     }
-     .title1 {
+    }
+    .title1 {
       font-size: 25px;
       font-family: 'Noto Serif', serif;
       color: #ffffff;
@@ -261,200 +240,210 @@
       margin-right: 145px; 
       z-index: 1;
       opacity: 0.5;
-     }
-     .title2 {
+    }
+    .title2 {
       font-size: 90px;
-      font-family:'Luxurious Script', serif;
+      font-family: 'Luxurious Script', serif;
       color: #ffffff;
       line-height: 0.8;
       margin-top: -13px; 
       z-index: 2;
     }
-                 .row {
-                  display: -ms-flexbox;
-                  display: flex;
-                  -ms-flex-wrap: wrap;
-                  flex-wrap: wrap;
-                  padding: 0 4px;
-                }
-                .column {
-                  -ms-flex: 25%; /* IE10 */
-                  flex: 25%;
-                  max-width: 25%;
-                  padding: 0 4px;
-                }
-                .column img {
-                  margin-top: 8px;
-                  vertical-align: middle;
-                  width: 100%;
-                }
-                .column img:hover {
-                  opacity: 0.8;
-                }
-                .modal {
-                  display: none;
-                  position: fixed;
-                  z-index: 1000;
-                  left: 0;
-                  top: 0;
-                  width: 100%;
-                  height: 100%;
-                  overflow-y: auto;
-                  background-color: rgba(0, 0, 0, 0.95);
-                  padding: 60px 0;
-                }
-                .close {
-                  color: white;
-                  position: fixed;
-                  top: 20px;
-                  right: 30px;
-                  font-size: 40px;
-                  font-weight: bold;
-                  z-index: 1001;
-                  cursor: pointer;
-                  background: rgba(0, 0, 0, 0.5);
-                  width: 50px;
-                  height: 50px;
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  line-height: 1;
-                }
-                .close:hover {
-                  color: #bbb;
-                }
-                .modal-content {
-                  margin: auto;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  gap: 20px;
-                  width: 90%;
-                  max-width: 1000px;
-                }
-                .modal-content img {
-                  width: 100%;
-                  max-width: 100%;
-                  height: auto;
-                  max-height: 90vh;
-                  object-fit: contain;
-                  border-radius: 6px;
-                }
-      .event-row {
-        position: absolute;
-        top: 200px;
-        margin: 0 25.5px;
-        width: 86.7%;
-        display: flex;
-        flex-direction: row; 
-        align-items:center;
-        justify-content: space-between; 
-        padding: 0 20px;
-        box-sizing: border-box;
-        z-index: 10;
-      }
-      .event-column-border {
-        flex: 1;
-        margin: 0; 
-        color: #ffffff;
-        font-size: 20px;
-        font-family: 'The Seasons Bold', serif;
-        border-top: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
-        text-align: center;
-        padding: 6px 0;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        line-height: 1;
-      }
-          .event-column {
-            position: relative;
-            z-index: 5; 
-            background-color: transparent; 
-            padding: 0 12px; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
-          .date-num {
-            font-size: 24px;
-            font-family: 'The Seasons Bold', serif;
-            line-height: 1.1;
-            font-weight: 700;
-            color: #ffffff;
-          }
-          .date-year {
-            font-size: 20px;
-            font-family: 'The Seasons Bold', serif;
-            line-height: 1.1;
-            font-weight: 700;
-            margin-top: 2px;
-            color: #ffffff;
-          }     
-          .time-row {
-            position: absolute;
-            top: 300px;
-            margin: 0 15%;
-            width: 70%;
-            display: flex;
-            flex-direction: row; 
-            align-items: center;
-            justify-content: space-between; 
-            padding: 0 20px;
-            box-sizing: border-box;
-            z-index: 10;
-          }
-          .time-column {
-            flex: 1; 
-            display: flex;
-            position: relative;
-            z-index: 5;
-            background-color: transparent;
-            padding: 0 1px;
-            box-sizing: border-box;
-            justify-content: center;
-            text-align: center;
-          }
-          .time-text {
-            font-family: 'New-Icon-Script',serif;
-            line-height: 1;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0;
-            white-space: nowrap;
-          }
-          .time-time {
-            font-size: 17px;
-            font-family: 'The Seasons Bold', serif;
-            line-height: 1;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0;
-            white-space: nowrap;
-          }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    .column img:hover {
+      opacity: 0.8;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 60px 0;
+    }
+    .close {
+      color: white;
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      font-weight: bold;
+      z-index: 1001;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .close:hover {
+      color: #bbb;
+    }
+    .modal-content {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+    }
+    .modal-content img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    
+    /* Perbaikan Style Bagian Event agar tidak berantakan/tumpang tindih */
+    .event-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000000;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+    .event-wrapper img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .event-content-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      z-index: 5;
+    }
+    .event-row {
+      margin-top: 20px;
+      width: 90%;
+      display: flex;
+      flex-direction: row; 
+      align-items: center;
+      justify-content: space-between; 
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    .event-column-border {
+      flex: 1;
+      color: #ffffff;
+      font-size: 18px;
+      font-family: 'The Seasons Bold', serif;
+      border-top: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      text-align: center;
+      padding: 6px 0;
+      box-sizing: border-box;
+    }
+    .event-column {
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .date-num {
+      font-size: 22px;
+      font-family: 'The Seasons Bold', serif;
+      line-height: 1.1;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .date-year {
+      font-size: 18px;
+      font-family: 'The Seasons Bold', serif;
+      line-height: 1.1;
+      font-weight: 700;
+      margin-top: 2px;
+      color: #ffffff;
+    }     
+    .time-container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 25px;
+      align-items: center;
+    }
+    .time-row-item {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .time-text {
+      font-family: 'New-Icon-Script', serif;
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+    .time-time {
+      font-size: 16px;
+      font-family: 'The Seasons Bold', serif;
+      line-height: 1;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+    .venue-box {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .venue-title-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
     .button {
       border: none;
       border-radius: 6px;
       background-color: rgba(255, 255, 255, 0.5);  
       color: #ffffff;
       padding: 10px 20px;
-      width: auto;    
-      height: auto;  
       text-align: center;
-      box-sizing: border-box; 
       text-decoration: none;
       display: inline-block;
       font-family: "Noto Serif", serif;
       font-size: 16px;
-      margin: 4px 2px;
+      margin: 10px 2px;
       cursor: pointer;
-      align-items: center;
-      justify-content: center;
     }
   </style>
 </head>
@@ -462,13 +451,13 @@
 
   <!-- ================= HOME ================= -->
   <div class="top-home">
-    <img src="https://lh3.googleusercontent.com/d/1D9Y1rFc997wjBGqj7Z-KKPO-UVv71jVm" alt="top home" style="max-height:100%; width:100%; cursor:pointer;">
+    <img src="https://lh3.googleusercontent.com/d/1D9Y1rFc997wjBGqj7Z-KKPO-UVv71jVm" alt="top home" style="width:100%; cursor:pointer;">
     <div class="name-home">Bride Name<br>Groom Name</div>
   </div>
 
   <div class="bottom-home">
     <div onclick="OpenInvitation();" style="display: block; width: 100%; cursor:pointer;">
-      <img src="https://lh3.googleusercontent.com/d/1d9zhjKctxY1glsZoFDfM0UMj0erzqFPA" alt="bottom home" style="max-height:100%; width:100%;">
+      <img src="https://lh3.googleusercontent.com/d/1d9zhjKctxY1glsZoFDfM0UMj0erzqFPA" alt="bottom home" style="width:100%;">
       <span class="gn-centered" id="guestName">Guest</span>
     </div>  
     <span class="date-home">Date</span>
@@ -483,9 +472,9 @@
 
   <!-- ================= OPENER ================= -->
   <div id="opener" class="section">
-    <img src="https://lh3.googleusercontent.com/d/1PdXdxX_te2sIral31ySEPdNJJt1-TAPR" alt="top home" style="max-height:100%; width:100%; cursor:pointer;">
+    <img src="https://lh3.googleusercontent.com/d/1PdXdxX_te2sIral31ySEPdNJJt1-TAPR" alt="top home" style="width:100%; cursor:pointer;">
     <div class="paragraph1">Together with our family, we joyfully invite you to celebrate our wedding day.</div>
-    <div class="paragraph2" style="margin-bottom:120px;"> ♡ </div>
+    <div class="paragraph2" style="margin-bottom:40px;"> ♡ </div>
   </div>
 
   <!-- ================= COUPLE ================= --> 
@@ -504,215 +493,149 @@
   </div>
 
   <!-- ================= AYAT ================= -->   
-  <div id="ayat" class="section" style="height:100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <img src="https://lh3.googleusercontent.com/d/1gEr3MojRCp6LQxrwXF0IoWl-QhhF8DVW" alt="ayat" style="max-width:50%;height:auto;cursor:pointer;margin-top:100px;">
+  <div id="ayat" class="section" style="min-height:80dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img src="https://lh3.googleusercontent.com/d/1gEr3MojRCp6LQxrwXF0IoWl-QhhF8DVW" alt="ayat" style="max-width:50%; height:auto; cursor:pointer;">
     <div class="paragraph1">
       <span style="font-size:20px"> وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُوْنَ </span>
       <span style="font-size:15px"> <br> "And We created pairs of all things so perhaps you would be mindful." </span>
-      <span style="font-size:10px">  QS Az-Zariyat : 49 </span>
+      <span style="font-size:10px"> <br> QS Az-Zariyat : 49 </span>
     </div>
   </div>
 
   <!-- ================= GALLERY ================= -->   
-  <div id="gallery" class="section" style="height:100dvh; display: flex;flex-direction:column;padding: 60px 20px;box-sizing: border-box;">
-      <div class="title-section">
-        <span class="title1"> Our </span>
-        <span class="title2"> Gallery </span>
-      </div>
-            <div id="story1">
-              <p class="paragraph2" style="text-align: justify;font-size:12px;padding: 0 8px; margin: 0; width: 100%;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              </p>
-            </div>
-                  <!-- Photo Grid -->
-                  <div class="row"> 
-                    <div class="column">
-                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
-                      <img style="aspect-ratio: 16/9.91; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
-                      <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg"> 
-                    </div>
-                    <div class="column">
-                      <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
-                      <img style="aspect-ratio: 5/7; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg">
-                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
-                    </div>  
-                    <div class="column">
-                      <img style="aspect-ratio: 16/9.91; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
-                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()"  src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
-                      <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
-                    </div>
-                    <div class="column">
-                      <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
-                      <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
-                      <img style="aspect-ratio: 5/7; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
-                    </div>  
-                  </div>
-                  <!-- Modal Pop-up -->
-                  <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <div class="modal-content">
-                      <img src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
-                      <img src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
-                      <img src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
-                      <img src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
-                      <img src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
-                      <img src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
-                      <img src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
-                      <img src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
-                    </div>
-                  </div>
-            <div id="story2">
-              <p class="paragraph2" style="text-align: justify;font-size:12px;padding: 10px 8px; margin: 0; width: 100%;">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              </p>
-              <img style="aspect-ratio: 16/9; object-fit: cover;padding: 10px 8px; margin: 0; width: 100%;" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
-            </div>
+  <div id="gallery" class="section" style="padding: 40px 20px; box-sizing: border-box;">
+    <div class="title-section">
+      <span class="title1"> Our </span>
+      <span class="title2"> Gallery </span>
     </div>
-  <!-- ================= EVENT ================= -->   
- <div id="event-details" class="section" style="max-width:100dvw;">
-     <img src="https://lh3.googleusercontent.com/d/1Larr4j2TzQ_9MGFftEEZuom6MXUZzSbd" style="width:100%; overflow:hidden;">
-          <div class="title-section" style="position:absolute;z-index:1;top:40px;left:5%;">
-            <span class="title1"> Our </span>
-            <span class="title2" style="margin-top: -16px; "> Day </span>
+    <div id="story1">
+      <p class="paragraph2" style="text-align: justify; font-size:12px; padding: 0 8px; margin: 0; width: 100%;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </div>
+    <!-- Photo Grid -->
+    <div class="row"> 
+      <div class="column">
+        <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
+        <img style="aspect-ratio: 16/9.91; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
+        <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg"> 
       </div>
-    
-      <div class="event-row"> 
-        <div class="event-column-border">
-          <span>Sunday</span> </div>
-        <div class="event-column">
-          <span class="date-num">25</span>
-          <span class="date-year">2026</span>
+      <div class="column">
+        <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+        <img style="aspect-ratio: 5/7; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831529/pexels-photo-30831529.jpeg">
+        <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
+      </div>  
+      <div class="column">
+        <img style="aspect-ratio: 16/9.91; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704296/pexels-photo-30704296.jpeg">
+        <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+        <img style="aspect-ratio: 9/16; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
+      </div>
+      <div class="column">
+        <img style="aspect-ratio: 4/3; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+        <img style="aspect-ratio: 1/1; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+        <img style="aspect-ratio: 5/7; object-fit: cover;" onclick="openModal()" src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
+      </div>  
+    </div>
+    <!-- Modal Pop-up -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <img src="https://images.pexels.com/photos/30831534/pexels-photo-30831534.jpeg">
+        <img src="https://images.pexels.com/photos/30831524/pexels-photo-30831524.jpeg">
+        <img src="https://images.pexels.com/photos/30704292/pexels-photo-30704292.jpeg">
+        <img src="https://images.pexels.com/photos/30831533/pexels-photo-30831533.jpeg">
+        <img src="https://images.pexels.com/photos/30704294/pexels-photo-30704294.jpeg">
+        <img src="https://images.pexels.com/photos/30704297/pexels-photo-30704297.jpeg">
+        <img src="https://images.pexels.com/photos/30831531/pexels-photo-30831531.jpeg">
+        <img src="https://images.pexels.com/photos/30704298/pexels-photo-30704298.jpeg">
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= EVENT (DIKOREKSI AGAR RAPI & TIDAK TUMPANG TINDIH) ================= -->   
+  <div id="event-details" class="section">
+    <div class="event-wrapper">
+      <img src="https://lh3.googleusercontent.com/d/1Larr4j2TzQ_9MGFftEEZuom6MXUZzSbd" alt="event bg">
+      
+      <div class="event-content-box">
+        <!-- Title Our Day -->
+        <div class="title-section" style="height: auto; margin-bottom: 10px;">
+          <span class="title1"> Our </span>
+          <span class="title2" style="margin-top: -16px;"> Day </span>
         </div>
-        <div class="event-column-border">
-          <span>October</span> </div>
-      </div> 
-   
-      <div class="time-row" style="top: 300px;"> 
-        <div class="time-column">
-          <p class="time-text"  style="font-size: 35px;">Akad</p> </div>
-        <div class="time-column">
-          <span class="time-time">09 AM - 11 AM</span> </div>
-      </div>
-
-      <div class="time-row" style="top: 335px;"> 
-        <div class="time-column">
-          <span class="time-time">11 AM - 01 PM</span> </div>
-        <div class="time-column">
-          <p class="time-text" style="font-size: 30px;">Resepsi</p> </div>
-      </div>
-   
-   <div class="title-section" style="position:absolute;z-index:1;top:300px;">   
-    <a href="https://google.com" class="button" target="_blank" rel="noopener noreferrer">Save the Date</a>
-   </div>
-
-      <div class="time-row" style="position:absolute;z-index:1;top: 400px;"> 
-        <div class="time-column" style="flex:0.8;">
-          <p class="time-text"  style="font-size: 30px;align-items: right;">Roemah</p> </div>
-        <div class="time-column">
-          <span class="time-time" style="margin-top: 20px;font-size: 30px;align-items: left;">Polonia</span> </div>
-      </div>
-      <span style="font-size:15px;font-color:#ffffff;">Jl. Cipinang Cempedak I No.27, RT.14/RW.6, Cipinang Cempedak, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13340</span>
-      <a href="https://google.com" class="button" target="_blank" rel="noopener noreferrer">Get Direction</a>
-
+      
+        <!-- Date Row -->
+        <div class="event-row"> 
+          <div class="event-column-border"><span>Sunday</span></div>
+          <div class="event-column">
+            <span class="date-num">25</span>
+            <span class="date-year">2026</span>
+          </div>
+          <div class="event-column-border"><span>October</span></div>
+        </div> 
      
- </div>
-    
+        <!-- Time Rows -->
+        <div class="time-container">
+          <div class="time-row-item">
+            <p class="time-text">Akad</p>
+            <span class="time-time">09 AM - 11 AM</span>
+          </div>
+          <div class="time-row-item">
+            <span class="time-time">11 AM - 01 PM</span>
+            <p class="time-text">Resepsi</p>
+          </div>
+        </div>
+     
+        <!-- Save the Date Button -->
+        <div style="margin-top: 15px;">   
+          <a href="https://google.com" class="button" target="_blank" rel="noopener noreferrer">Save the Date</a>
+        </div>
 
+        <!-- Venue Name -->
+        <div class="venue-box">
+          <div class="venue-title-row">
+            <p class="time-text" style="font-size: 28px;">Roemah</p> 
+            <span class="time-time" style="font-size: 28px; font-family: 'The Seasons Bold', serif;">Polonia</span>
+          </div>
+          <span style="font-size: 13px; color: #ffffff; text-align: center; max-width: 90%; line-height: 1.4; margin-top: 5px;">
+            Jl. Cipinang Cempedak I No.27, RT.14/RW.6, Cipinang Cempedak, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13340
+          </span>
+        </div>
 
+        <!-- Get Direction Button -->
+        <div style="margin-top: 10px;">
+          <a href="https://google.com" class="button" target="_blank" rel="noopener noreferrer">Get Direction</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-   
-
-    
   <!-- ================= FUNCTIONALITY SCRIPT ================= -->
-  <script async src="https://tally.so/widgets/embed.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/components/copy-button/copy-button.js"></script>
   <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUDyZaDCa9DX4pmfQ-yxsfHGdKs761b1E8jeagSrxEcYwWJMD3mwNGTw3-phEztO/exec';
-
-    // 1. AUTOPLAY AUDIO & VIDEO ON FIRST CLICK
-    document.addEventListener('click', function() {
-      var audio = document.getElementById('bg-audio');
-      if (audio && audio.paused) {
-        audio.play().catch(function(error) {
-          console.log("Audio autoplay failed/blocked: ", error);
-        });
-      }
-      var iframe = document.querySelector('.video-background iframe');
-      if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-      }
-    }, { once: true });
-
-    // 2. OPEN INVITATION BUTTON
+    // 1. OPEN INVITATION BUTTON (DIPERBAIKI VARIABELNYA)
     function OpenInvitation() {
       document.documentElement.style.overflow = 'auto';
       document.body.style.overflow = 'auto';
 
       setTimeout(function() {
-        const bridge = document.getElementById('bridge');
+        const bridgeSection = document.getElementById('bridge');
         if (bridgeSection) {
           bridgeSection.scrollIntoView({ behavior: 'smooth' });
         }
       }, 50);
     }
 
-    // 3. TALLY POPUP & POSITION RESTORE
-    function bukaTallyPopup() {
-      if (typeof Tally !== 'undefined') {
-        Tally.openPopup('lbx9gX', {
-          layout: 'modal',
-          width: 800,
-          hideTitle: true,
-          overlay: true,
-          emoji: {
-            text: '🌸',
-            animation: 'spin'
-          },
-          onClose: kembalikanKeRSVP
-        });
-      }
-    }
-
-    function kembalikanKeRSVP() {
-      const rsvpEl = document.getElementById('rsvp-section');
-      if (rsvpEl) {
-        rsvpEl.scrollIntoView({ behavior: 'instant' });
-      }
-    }
-
-    window.addEventListener('message', function(e) {
-      if (e.data && typeof e.data === 'string' && e.data.includes('Tally.PopupClosed')) {
-        kembalikanKeRSVP();
-      }
-    });
-
-    // 4. GIFT BUTTON TOGGLE
-    document.addEventListener('DOMContentLoaded', () => {
-      const giftBtn = document.getElementById('giftBtn');
-      const hiddenGift = document.getElementById('hidden-gift');
-  
-      if (giftBtn && hiddenGift) {
-        giftBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          hiddenGift.classList.toggle('show');
-        });
-      }
-    });
-
-    // 5. GET GUEST NAME FROM URL PARAMS (?to=Nama atau ?name=Nama)
+    // 2. GET GUEST NAME FROM URL PARAMS (?to=Nama atau ?name=Nama)
     function getGuestName() {
       const urlParams = new URLSearchParams(window.location.search);
       const guest = urlParams.get('to') || urlParams.get('name') || 'Guest';
       const decodedGuest = decodeURIComponent(guest);
 
-      // div / span
       const guestContainer = document.getElementById('guestName');
       if (guestContainer) {
         guestContainer.innerText = decodedGuest;
       }
       
-      // OG Title
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) {
         ogTitle.setAttribute('content', `Dear ${decodedGuest}, you're invited to our wedding`);
@@ -720,103 +643,26 @@
       document.title = `Dear ${decodedGuest}, you're invited to our wedding`;
     }
 
-    // 6. FETCH WISHES FROM GOOGLE APPS SCRIPT
-    function loadWishes() {
-      const container = document.getElementById('wishesContainer');
-      
-      fetch('https://script.google.com/macros/s/AKfycbxBDe1iPGhyuco5RpYna6tvjIk-H9AInWfWS4ne7BCBy0-TgGjePANXBJrQAMNkb0UCog/exec')
-        .then(response => response.json())
-        .then(data => {
-          if (!container) return;
-          container.innerHTML = '';
-
-          if (!data || data.length === 0) {
-            container.innerHTML = '<div class="empty-state">No wishes yet. Be the first to leave one ♡</div>';
-            return;
-          }
-
-          data.forEach(function(item) {
-            const card = document.createElement('div');
-            card.className = 'wish-card';
-
-            const name = document.createElement('div');
-            name.className = 'guest-title-name';
-            name.textContent = item.name;
-
-            const wish = document.createElement('div');
-            wish.className = 'guest-wish';
-            wish.textContent = item.wish;
-
-            card.appendChild(name);
-            card.appendChild(wish);
-            container.appendChild(card);
-          });
-        })
-        .catch(err => {
-          console.error('Error loading wishes:', err);
-          if (container && !container.querySelector('.wish-card')) {
-            container.innerHTML = '<div class="error">Loading wishes....</div>';
-          }
-        });
-    }
-     // INITIALIZE AFTER DOM LOADED
     document.addEventListener('DOMContentLoaded', () => {
       getGuestName();
-      loadWishes();
-      
-      // Auto refresh ucapan setiap 30 detik
-      setInterval(loadWishes, 30000);
-
-      // Countdown
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
     });
 
-
-    // 7. COUNTDOWN TIMER SCRIPT
-          const targetDate = new Date("October 25, 2026 00:00:00").getTime();
-      
-          function updateCountdown() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-      
-            if (difference > 0) {
-              const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-      
-              const cdDays = document.getElementById("cd-days");
-              const cdHours = document.getElementById("cd-hours");
-              const cdMins = document.getElementById("cd-mins");
-              const cdSecs = document.getElementById("cd-secs");
-      
-              if (cdDays) cdDays.innerText = String(days).padStart(2, '0');
-              if (cdHours) cdHours.innerText = String(hours).padStart(2, '0');
-              if (cdMins) cdMins.innerText = String(minutes).padStart(2, '0');
-              if (cdSecs) cdSecs.innerText = String(seconds).padStart(2, '0');
-            }
-          }
-      
- // 8. FULLSCREEN GALLERY 
-       function openModal() {
-            document.getElementById("myModal").style.display = "block";
-            document.body.style.overflow = "hidden"; // Mencegah halaman utama ikut bergeser saat modal di-scroll
-          }
-          
-          function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-            document.body.style.overflow = "auto"; // Mengembalikan scroll halaman utama
-          }
-          
-          // Tutup modal jika user menekan tombol 'ESC' di keyboard
-          document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-              closeModal();
-            }
-          });
-
+    // 3. FULLSCREEN GALLERY 
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
     
-</script>
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
