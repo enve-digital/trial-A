@@ -1,4 +1,4 @@
-e<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <base target="_self">
@@ -347,23 +347,22 @@ e<!DOCTYPE html>
         box-sizing: border-box;
         z-index: 10;
       }
-      .date-container {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        border-top: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
-      }
       .column-13 {
         flex: 1;
-        margin: 0 0; 
+        margin: 0; 
         color: #ffffff;
         font-size: 20px;
         font-family: 'Noto Serif', serif;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
         text-align: center;
-        padding: 2px 0;
+        padding: 6px 0; /* Mengatur jarak tipis agar teks tidak menempel ekstrem ke garis */
         box-sizing: border-box;
-        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.2;
       }
         .column-dateyear {
           flex: 0.7; /* Lebar kolom tengah bisa disesuaikan agar proporsional */
@@ -511,7 +510,6 @@ e<!DOCTYPE html>
       </div>
     
       <div class="event-row"> 
-        <div class="date-container">
         <div class="column-13">
           <p>Sunday</p> </div>
         <div class="column-dateyear">
@@ -520,7 +518,7 @@ e<!DOCTYPE html>
         <div class="column-13">
           <span>October</span> </div>
       </div> 
-      </div> 
+     
 
  </div>
     
