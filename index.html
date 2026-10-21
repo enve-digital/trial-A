@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+e<!DOCTYPE html>
 <html>
 <head>
   <base target="_self">
@@ -336,25 +336,49 @@
                 }
       .event-row {
         position: absolute;
-        top: 240px; /* Atur jarak turunnya dari batas atas frame */
+        top: 240px;
         margin: 0 17.5px;
         width: 91%;
         display: flex;
-        flex-direction: row; /* Berbaris horizontal ke samping */
-        justify-content: space-around; /* Jarak antar kolom seimbang */
+        flex-direction: row; 
+        align-items:center;
+        justify-content: space-between; 
         padding: 0 20px;
         box-sizing: border-box;
         z-index: 10;
       }
       .column-13 {
-        flex: 1; /* Masing-masing membagi lebar sama rata (1/3) */
-        margin: 0 8px; /* Jarak/gap antar kolom */
+        flex: 1;
+        margin: 0 8px; 
         color: #ffffff;
         border-top: 2px solid #ffffff;
         border-bottom: 2px solid #ffffff;
         text-align: center;
+        padding: 12px 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
-    
+        .column-dateyear {
+          flex: 0.8; /* Lebar kolom tengah bisa disesuaikan agar proporsional */
+          border: none; /* Kolom tengah tidak pakai garis horizontal penuh seperti pinggirnya */
+          background: transparent;
+        }
+            .date-num {
+              font-size: 28px;
+              line-height: 1.1;
+              font-weight: 400;
+            }
+        
+            .date-year {
+              font-size: 24px;
+              line-height: 1.1;
+              font-weight: 400;
+              margin-top: 4px;
+            }
+        
   </style>
 </head>
 <body>
@@ -479,8 +503,9 @@
   <div class="column-13">
     <p>Sunday</p>
   </div>
-   <div class="column-13">
-    <p>Text for the first column goes here.</p>
+   <div class="column-13 column-dateyear">
+    <span class="date-num">25</span>
+    <span class="date-year">2026</span>
   </div>
     <div class="column-13">
     <p>October</p>
