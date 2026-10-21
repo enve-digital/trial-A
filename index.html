@@ -363,7 +363,7 @@
         border-top: 1px solid #ffffff;
         border-bottom: 1px solid #ffffff;
         text-align: center;
-        padding: 6px 0; /* Mengatur jarak tipis agar teks tidak menempel ekstrem ke garis */
+        padding: 6px 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -373,9 +373,9 @@
       }
           .event-column {
             position: relative;
-            z-index: 5; /* Membuatnya berada di atas garis border */
-            background-color: transparent; /* Menyesuaikan dengan warna background frame agar garis tertutup di area teks */
-            padding: 0 12px; /* Jarak horizontal agar teks tidak terlalu dempet dengan ujung garis kiri-kanan */
+            z-index: 5; 
+            background-color: transparent; 
+            padding: 0 12px; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -601,10 +601,16 @@
           <p class="time-text" style="font-size: 30px;">Resepsi</p> </div>
       </div>
    
-   <div class="title-section" style="position:absolute;z-index:1;top:350px;">   
+   <div class="title-section" style="position:absolute;z-index:1;top:340px;">   
     <a href="https://google.com" class="button" target="_blank" rel="noopener noreferrer">Save the Date</a>
    </div>
-   
+
+   <div class="time-row" style="top: 360px;"> 
+        <div class="time-column">
+          <p class="time-text"  style="font-size: 35px;">Roemah</p> </div>
+        <div class="time-column" style="margin-top: 30px;">
+          <span class="time-time">Polonia</span> </div>
+      </div>
  </div>
     
 
