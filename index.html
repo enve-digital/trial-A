@@ -47,6 +47,23 @@
       font-family: 'Bellefair', serif;
       background: #000000;
     }
+        .scroll-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 34px;
+      padding: 0 18px;
+      background: #000000;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+
+    .scroll-btn:active {
+      transform: scale(0.98);
+    }
     .name {
       top: 12%;
       left: 25%;
@@ -914,7 +931,19 @@
     src="https://lh3.googleusercontent.com/d/1_9aKOv02mox3DvYfBJcT6s9t2ROHmF-1" 
     alt="closing"
   />
-
+  <!-- BACKGROUND AUDIO -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="https://raw.githubusercontent.com/enve-digital/wedding/main/rock%20show.mp3" type="audio/mpeg">
+  </audio>
+    <!-- VIDEO BACKGROUND -->
+  <div class="video-background">
+    <iframe
+      src="https://ulemanti.id/wp-content/uploads/2026/10/Prewedd-Clip_Talita-Dafpa-for-clip.mp4?autoplay=1&mute=1&muted=1&controls=0&loop=1&playlist=QOJaaB8CMQg&playsinline=1&enablejsapi=1&disablekb=1&fs=0&modestbranding=1&rel=0"
+      allow="autoplay; encrypted-media"
+      playsinline
+      frameborder="0">
+    </iframe>
+  </div>
     
   <!-- ================= FUNCTIONALITY SCRIPT ================= -->
   <script async src="https://tally.so/widgets/embed.js"></script>
