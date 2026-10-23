@@ -537,7 +537,27 @@
             margin: 0;
             white-space: nowrap;
           }
+    #hidden-gift {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      margin-top: 15px auto 0;
+      font-family: 'Bellefair', serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+    }
 
+    #hidden-gift.show {
+      opacity: 1;
+      max-height: 200px;
+      padding: 20px 0;
+      overflow: visible;
+    }
   </style>
 </head>
 <body>
@@ -741,13 +761,21 @@
   <a href="javascript:void(0);" class="button" onclick="bukaTallyPopup()" style="margin-top: 6px;">RSVP</a>
       </div>  
   <!-- GIFT -->
-    <div id="event-details" class="section" style="max-width:100dvw;margin-top:30dvh;">
+    <div id="gift" class="section" style="max-width:100dvw;margin-top:30dvh;">
               <div class="title-section" style="position:absolute;z-index:1;top:30px;left:5%;">
             <span class="title1"> Wedding </span>
             <span class="title2" style="margin-top: -16px; "> Wishes </span>
-
 </div>
-</div>
+      <div id="hidden-gift">
+        BNI 260482893 a/n Lolita Putri 
+        <sl-copy-button
+          value="260482893"
+          copy-label="Click to copy"
+          success-label="Copied"
+          error-label="Whoops, your browser doesn't support this!"
+        ></sl-copy-button>
+      </div>
+    </div>
 
     
   <!-- ================= FUNCTIONALITY SCRIPT ================= -->
