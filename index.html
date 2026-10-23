@@ -499,6 +499,46 @@
   margin-top: -14px;
 }
 
+ .rsvp-row {
+            position: absolute;
+            margin: 0 15%;
+            width: 70%;
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 10;
+          }
+          .rsvp-column {
+            flex: 1; 
+            display: flex;
+            position: relative;
+            z-index: 5;
+            background-color: transparent;
+            padding: 0 1px;
+            box-sizing: border-box;
+          }
+          .rsvp-left {
+            font-size: 25px;
+            font-family: 'The Seasons Bold', serif;
+            line-height: 1;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            white-space: nowrap;
+          }
+          .rsvp-right {
+ font-size: 25px;
+            font-family: 'New-Icon-Script',serif;
+            line-height: 1;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            white-space: nowrap;
+          }
+
   </style>
 </head>
 <body>
@@ -691,11 +731,11 @@
 </div>
   <!-- RSVP BUTTON -->
 <div class="section" style="height: 50dvh;">
-          <div class="time-row" style="position:absolute;z-index:1;width:100dvw;"> 
-        <div class="time-column">
-          <p class="time-text"  style="font-family: 'The Seasons Bold', serif; font-size: 20px;align-items: right;">Please confirm</p> </div>
-        <div class="time-column">
-          <span class="time-time" style="font-family: 'New-Icon-Script',serif; font-size: 20px;align-items: left;">your attendance</span> </div>
+          <div class="rsvp-row" style="position:absolute;z-index:1;"> 
+        <div class="rsvp-column">
+          <p class="rsvp-left"  style="align-items: right;">Please confirm</p> </div>
+        <div class="rsvp-column">
+          <span class="rsvp-right" style="align-items: left;">your attendance</span> </div>
       </div>
       </div>
 
