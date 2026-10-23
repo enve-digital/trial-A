@@ -53,8 +53,8 @@ section, article, .section, .couple, .wishes-section, .animate-me {
   transform: translateY(90px); 
   
   /* Durasi diperpanjang jadi 1.2s dengan kurva animasi smooth yang kontras */
-  transition: opacity 4.0s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 4.0s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 3.0s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 3.0s cubic-bezier(0.4, 0, 0.2, 1);
   
   will-change: opacity, transform;
 }
@@ -903,7 +903,7 @@ section, article, .section, .couple, .wishes-section, .animate-me {
           <span class="rsvp-right" style="align-items: left;">your attendance</span> </div>
       </div>
 </div>
-  <div class="section" style="position:absolute;margin-top:5dvh;padding:2px;align-items: center; justify-content: center; text-align: center; ">
+  <div class="section" style="position:relative;margin-top:5dvh;padding:2px;align-items: center; justify-content: center; text-align: center; ">
   <a href="javascript:void(0);" class="button" onclick="bukaTallyPopup()" style="margin-top: 6px;">RSVP</a>
       </div>  
   <!-- GIFT -->
@@ -1156,7 +1156,7 @@ section, article, .section, .couple, .wishes-section, .animate-me {
           });
 
 // 9. FADE IN
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", fungsiinenglish() {
   const observerOptions = {
     // Memberi offset negatif di bawah agar animasi baru terpicu saat elemen 
     // benar-benar sudah masuk 100px ke dalam layar
