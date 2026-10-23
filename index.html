@@ -47,19 +47,24 @@
       font-family: 'Bellefair', serif;
       background: transparent;
     }
-  /* Target all sections or general containers */
-    section, article, .section, .couple, .wishes-section, .animate-me {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      will-change: opacity, transform; /* Optimizes performance */
-    }
+/* Target semua kontainer/section utama */
+section, article, .section, .couple, .wishes-section, .animate-me {
+  opacity: 0;
+  /* Diturunkan lebih jauh dari 30px jadi 70px agar gerakan puncaknya terlihat jelas */
+  transform: translateY(70px); 
+  
+  /* Durasi diperpanjang jadi 1.2s dengan kurva animasi smooth yang kontras */
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  will-change: opacity, transform;
+}
 
-    /* The active state applied by JS */
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* Status aktif ketika masuk ke viewport */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
         .scroll-btn {
       display: inline-flex;
       align-items: center;
@@ -1151,25 +1156,30 @@
             }
           });
 
-// 9. FADE IN (Ditaruh di dalam DOMContentLoaded agar elemen sudah siap terbaca)
-    document.addEventListener("DOMContentLoaded", function() {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // Stop observing once animated to save browser memory
-            observer.unobserve(entry.target); 
-          }
-        });
-      }, {
-        threshold: 0.1 // Triggers when 10% of the element is visible
-      });
+// 9. FADE IN
+document.addEventListener("DOMContentLoaded", function() {
+  const observerOptions = {
+    // Memberi offset negatif di bawah agar animasi baru terpicu saat elemen 
+    // benar-benar sudah masuk 100px ke dalam layar
+    rootMargin: '0px 0px -100px 0px',
+    threshold: 0.15 
+  };
 
-      // Targetkan semua class/tag pembungkus section yang ada di kodenya
-      document.querySelectorAll('section, article, .section, .couple, .wishes-section, .animate-me').forEach(element => {
-        observer.observe(element);
-      });
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); 
+      }
     });
+  }, observerOptions);
+
+  document.querySelectorAll('section, article, .section, .couple, .wishes-section, .animate-me').forEach(element => {
+    observer.observe(element);
+  });
+});
+
+    
 </script>
 </body>
 </html>
